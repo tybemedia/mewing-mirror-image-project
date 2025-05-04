@@ -1,24 +1,23 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
 
 const Navigation = () => {
   return (
-    <header className="py-6 sticky top-0 z-50 bg-white">
+    <header className="py-4 sticky top-0 z-50 bg-white">
       <div className="container flex justify-between items-center">
-        <div className="font-serif text-xl font-medium">Dr. Mike Mew</div>
-        <div className="hidden md:flex space-x-8 items-center">
-          <a href="#about" className="text-sm hover:underline">About</a>
-          <a href="#info" className="text-sm hover:underline">Mewing</a>
-          <a href="#videos" className="text-sm hover:underline">Videos</a>
-          <a href="#contact" className="text-sm hover:underline">Contact</a>
-          <Button variant="outline" className="text-sm rounded-full px-6">
-            Book a Consultation
-          </Button>
+        <div className="flex items-center">
+          <img src="/lovable-uploads/34a60358-abf5-41f3-a6dd-85acee9d31a5.png" alt="VIA Group" className="h-12" />
         </div>
-        <Button variant="ghost" size="icon" className="md:hidden">
-          <Menu size={20} />
+        <div className="hidden md:flex space-x-8 items-center">
+          <a href="#" className="text-sm hover:opacity-70">Startseite</a>
+          <a href="#" className="text-sm hover:opacity-70">Über uns</a>
+          <a href="#" className="text-sm hover:opacity-70">Leistungen</a>
+          <a href="#" className="text-sm hover:opacity-70">Branchen</a>
+          <a href="#" className="text-sm hover:opacity-70">Karriere</a>
+        </div>
+        <Button className="bg-black hover:bg-black/90 text-white text-sm rounded">
+          Kostenlose Potenzialanalyse
         </Button>
       </div>
     </header>

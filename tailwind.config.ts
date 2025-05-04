@@ -25,6 +25,10 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'teal': {
+					DEFAULT: 'hsl(var(--teal))',
+					light: 'hsl(var(--teal-light))',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -65,7 +69,6 @@ export default {
 				}
 			},
 			fontFamily: {
-				'serif': ['EB Garamond', 'serif'],
 				'sans': ['Inter', 'sans-serif']
 			},
 			borderRadius: {
