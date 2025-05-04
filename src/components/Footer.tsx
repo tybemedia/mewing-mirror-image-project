@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
-            <div className="font-serif text-xl font-medium mb-4">Maximilian Mewing</div>
+            <div className="font-serif text-xl font-medium mb-4">Dr. Mike Mew</div>
             <p className="text-gray-500 max-w-sm text-sm">
-              Dedicated to helping people achieve better facial aesthetics and breathing through proper oral posture.
+              Dedicated to helping people achieve better facial development and breathing through orthotropic techniques.
             </p>
           </div>
           
@@ -30,7 +30,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Maximilian Mewing. All rights reserved.
+              © {new Date().getFullYear()} Dr. Mike Mew. All rights reserved.
             </div>
           </div>
         </div>

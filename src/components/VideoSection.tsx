@@ -6,31 +6,31 @@ const VideoSection = () => {
   const videos = [
     {
       id: 1,
-      title: "Beginner's Guide to Mewing",
-      duration: "7:15",
-      thumbnail: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      title: "Mewing: Beginner's Complete Guide",
+      duration: "15:23",
+      thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d",
     },
     {
       id: 2,
       title: "Common Mewing Mistakes to Avoid",
-      duration: "5:42",
-      thumbnail: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      duration: "8:47",
+      thumbnail: "https://images.unsplash.com/photo-1551076805-e1869033e561",
     },
     {
       id: 3,
       title: "Before and After: Mewing Results",
-      duration: "10:38",
-      thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      duration: "12:36",
+      thumbnail: "https://images.unsplash.com/photo-1535295972055-1c762f4483e5",
     }
   ];
 
   return (
-    <section id="videos" className="section bg-gray-50 border-t border-gray-100">
+    <section id="videos" className="section bg-gray-50 py-20">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">Watch & Learn</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">Educational Videos</h2>
           <p className="text-xl text-gray-600">
-            Educational videos to help you master proper tongue posture and facial development techniques.
+            Learn the correct techniques and principles of orthotropics through my educational video series.
           </p>
         </div>
         

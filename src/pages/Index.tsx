@@ -6,7 +6,7 @@ import About from '@/components/About';
 import InfoSection from '@/components/InfoSection';
 import VideoSection from '@/components/VideoSection';
 import Footer from '@/components/Footer';
-import { ArrowRight } from 'lucide-react';
+import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
@@ -16,6 +16,7 @@ const Index = () => {
       <About />
       <InfoSection />
       <VideoSection />
+      <ContactSection />
       <Footer />
     </div>
   );

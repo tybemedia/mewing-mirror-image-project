@@ -3,42 +3,42 @@ import React from 'react';
 
 const About = () => {
   return (
-    <section id="about" className="section bg-gray-50 border-t border-gray-100">
+    <section id="about" className="section bg-gray-50 py-20">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1582562124811-c09040d0a901" 
-              alt="Maximilian" 
+              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d" 
+              alt="Dr. Mike Mew" 
               className="rounded-lg w-full h-[500px] object-cover"
             />
           </div>
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">About Maximilian</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">About Dr. Mike Mew</h2>
             <p className="text-gray-600 mb-4">
-              As a dedicated orthotropist, I've spent years studying the science of facial development and the impact of proper oral posture on overall health and aesthetics.
+              As a third-generation orthodontist, I've spent my career researching and practicing orthotropics, focusing on natural facial development and proper oral posture.
             </p>
             <p className="text-gray-600 mb-4">
-              My approach combines traditional orthotropic techniques with modern research to provide practical guidance for people of all ages.
+              My technique, known as "mewing," has helped thousands of people improve their facial aesthetics, breathing efficiency, and overall health by correcting tongue posture.
             </p>
             <p className="text-gray-600 mb-6">
-              Through my work, I've helped thousands improve their breathing, reduce sleep apnea symptoms, enhance their facial structure, and boost their confidence.
+              I believe in addressing the root causes of facial development issues rather than just treating the symptoms, and I've dedicated my life to spreading this knowledge.
             </p>
             <div className="grid grid-cols-2 gap-6 mt-8">
               <div>
-                <div className="text-3xl font-serif font-medium">10+</div>
+                <div className="text-3xl font-serif font-medium">30+</div>
                 <div className="text-gray-500 text-sm mt-1">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-serif font-medium">5K+</div>
-                <div className="text-gray-500 text-sm mt-1">Success Stories</div>
+                <div className="text-3xl font-serif font-medium">10k+</div>
+                <div className="text-gray-500 text-sm mt-1">Patients Helped</div>
               </div>
               <div>
-                <div className="text-3xl font-serif font-medium">100+</div>
-                <div className="text-gray-500 text-sm mt-1">Videos Created</div>
+                <div className="text-3xl font-serif font-medium">200+</div>
+                <div className="text-gray-500 text-sm mt-1">Educational Videos</div>
               </div>
               <div>
-                <div className="text-3xl font-serif font-medium">20+</div>
+                <div className="text-3xl font-serif font-medium">50+</div>
                 <div className="text-gray-500 text-sm mt-1">Countries Reached</div>
               </div>
             </div>

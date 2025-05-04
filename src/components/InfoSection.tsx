@@ -4,21 +4,21 @@ import { CheckCircle } from 'lucide-react';
 
 const InfoSection = () => {
   const benefits = [
-    "Improved facial aesthetics and jawline definition",
-    "Enhanced breathing and reduced sleep apnea symptoms",
-    "Better oral posture and dental alignment",
-    "Reduced mouth breathing and associated health issues",
-    "Potential prevention of orthodontic problems in children",
-    "Improved overall facial symmetry"
+    "Improved facial structure and jawline definition",
+    "Enhanced breathing and reduced mouth breathing",
+    "Better oral posture and natural dental alignment",
+    "Reduced sleep apnea and airway issues",
+    "Prevention of orthodontic problems in children",
+    "Improved overall facial aesthetics and symmetry"
   ];
 
   return (
-    <section id="info" className="section">
+    <section id="info" className="section py-20">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">What is Mewing?</h2>
           <p className="text-xl text-gray-600">
-            Mewing is a technique that focuses on proper tongue posture to reshape your face naturally and improve breathing.
+            Mewing is the practice of proper tongue posture, where the entire tongue rests against the roof of the mouth, transforming facial structure naturally.
           </p>
         </div>
         
@@ -26,13 +26,13 @@ const InfoSection = () => {
           <div>
             <h3 className="text-2xl font-serif font-medium mb-6">The Technique</h3>
             <p className="text-gray-600 mb-4">
-              Mewing involves placing the entire tongue against the roof of the mouth while keeping the lips closed and teeth gently touching.
+              Mewing involves positioning your entire tongue against the roof of your mouth, keeping your lips closed and teeth gently together.
             </p>
             <p className="text-gray-600 mb-4">
-              This proper oral posture, when maintained consistently, can gradually influence facial structure, especially during development years.
+              When maintained as your resting oral posture, this technique can guide facial development and even create positive changes in adults.
             </p>
             <p className="text-gray-600">
-              The technique is named after Dr. John Mew, who pioneered the field of orthotropics, focusing on facial growth guidance rather than just treating symptoms.
+              This natural approach focuses on correct function to achieve correct form, addressing the root causes of many modern orthodontic issues.
             </p>
           </div>
           <div>
