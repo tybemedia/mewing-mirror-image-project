@@ -1,12 +1,38 @@
-
 import React from 'react';
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { CheckCircle } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
+import { type CarouselApi } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
+import { FadeIn } from "./animations/FadeIn";
+import GradientHighlight from './ui/GradientHighlight';
 
 const ChallengesSection = () => {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   const challenges = [
     {
-      icon: "chart-pie",
+      icon: (
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white">
+          <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      ),
       title: "Hohe Steuer- und Abgabelast",
       description: [
         "Steuern stellen für die meisten Unternehmer einen enormen Kostenfaktor dar und skalieren mit steigenden Umsätzen mit.",
@@ -14,60 +40,164 @@ const ChallengesSection = () => {
       ]
     },
     {
-      icon: "users",
+      icon: (
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white">
+          <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+      ),
       title: "Fehlendes Kompetenzteam",
       description: [
         "Gerade bei Foundern erster Generation fehlt meist ein Beraterstab der fachübergreifend beraten kann und darf.",
         "High End Beratung bleibt dabei häufig Hochvermögenden vorenthalten."
       ]
+    },
+    {
+      icon: (
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white">
+          <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+      ),
+      title: "Unbekannte Haftungsrisiken",
+      description: [
+        "Die meisten Unternehmer unterschätzen welchen Haftungsrisiken sie und ihr Vermögen aufgrund suboptimaler Strukturen oder fehlerhafter Verträge ausgesetzt sind."
+      ]
+    },
+    {
+      icon: (
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white">
+          <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      ),
+      title: "Fehlende zeitliche Ressourcen",
+      description: [
+        "Da der Fokus des Geschäftsführers für die Skalierung und den Aufbau des Unternehmens benötigt wird, fehlen die Kapazitäten, um sich parallel noch tiefgreifend mit weiteren Themen zu beschäftigen."
+      ]
+    },
+    {
+      icon: (
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white">
+          <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      ),
+      title: "Überangebot an Möglichkeiten",
+      description: [
+        "Von Holdings über Immobilieninvestments zu Dubai LLC, Meme Coins und privater Krankenversicherung. Das Internet ist voll von Angeboten und Meinungen. Was fehlt ist eine differenzierte Einordnung der relevanten Themen."
+      ]
+    },
+    {
+      icon: (
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-white">
+          <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+      ),
+      title: "Viele Vermittler wenige Spezialisten",
+      description: [
+        "Die meisten Berater agieren nach dem Prinzip Bauchladen und bieten Standardlösungen von der Stange an.",
+        "Dabei braucht es individuelle Konzepte, die exakt auf die Situation des Mandanten zugeschnitten sind."
+      ]
     }
   ];
 
+  // Split challenges into pairs
+  const challengePairs = [];
+  for (let i = 0; i < challenges.length; i += 2) {
+    challengePairs.push(challenges.slice(i, i + 2));
+  }
+
   return (
-    <section className="py-16 bg-gradient-to-b from-[#1a242c] to-[#2c4654] text-white">
-      <div className="container">
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl mb-8 flex items-center">
-            <span className="mr-4">6 unternehmerische</span> 
-            <span className="bg-[#35a8a1] px-4 py-1">Herausforderungen</span>
-          </h2>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          {challenges.map((challenge, index) => (
-            <div key={index} className="bg-[#35a8a1] p-10 rounded-sm">
-              <div className="mb-6">
-                {challenge.icon === "chart-pie" ? (
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 2a10 10 0 0 1 10 10" />
-                  </svg>
-                ) : (
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                  </svg>
-                )}
-              </div>
-              <h3 className="text-2xl font-medium mb-4">{challenge.title}</h3>
-              {challenge.description.map((paragraph, pIndex) => (
-                <p key={pIndex} className="mb-4">{paragraph}</p>
+    <>
+      {/* 6 Unternehmerische Herausforderungen */}
+      <section className="py-24 bg-gradient-to-b from-[#1a242c] to-[#2c4654] text-white">
+        <div className="container">
+          <FadeIn>
+            <div className="mb-12">
+              <h2 className="text-4xl md:text-5xl mb-8 flex items-center flex-wrap">
+                <span className="mr-4">6 unternehmerische</span> 
+                <GradientHighlight delay={0.3}>
+                  Herausforderungen
+                </GradientHighlight>
+              </h2>
+            </div>
+          </FadeIn>
+
+          <Carousel 
+            setApi={setApi}
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
+            <CarouselContent>
+              {challengePairs.map((pair, pairIndex) => (
+                <CarouselItem key={pairIndex}>
+                  <div className="grid grid-cols-2 gap-6">
+                    {pair.map((challenge, index) => (
+                      <FadeIn key={index} delay={index * 0.2}>
+                        <motion.div 
+                          whileHover={{ scale: 1.02 }}
+                          transition={{ duration: 0.3 }}
+                          className="bg-[#35a8a1] p-10 rounded-sm"
+                        >
+                          <div className="mb-8">
+                            {challenge.icon}
+                          </div>
+                          <h3 className="text-2xl font-medium mb-6 text-white">
+                            {challenge.title}
+                          </h3>
+                          {challenge.description.map((paragraph, pIndex) => (
+                            <p key={pIndex} className="mb-4 text-white/90 leading-relaxed">
+                              {paragraph}
+                            </p>
+                          ))}
+                        </motion.div>
+                      </FadeIn>
+                    ))}
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+
+            {/* Pagination */}
+            <div className="flex justify-center gap-2 mt-8">
+              {challengePairs.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    current === index ? 'w-8 bg-white' : 'w-2 bg-white/50'
+                  }`}
+                />
               ))}
             </div>
-          ))}
+
+            <div className="flex justify-end gap-2 mt-8">
+              <CarouselPrevious className="relative static bg-white/10 hover:bg-white/20 text-white" />
+              <CarouselNext className="relative static bg-white/10 hover:bg-white/20 text-white" />
+            </div>
+          </Carousel>
         </div>
-        
-        <div className="flex justify-center mt-8">
-          <div className="flex space-x-2">
-            <span className="h-2 w-2 rounded-full bg-white"></span>
-            <span className="h-2 w-2 rounded-full bg-white/50"></span>
-            <span className="h-2 w-2 rounded-full bg-white/50"></span>
+      </section>
+
+      {/* Kommt dir bekannt vor? section */}
+      <section className="py-24 bg-white">
+        <div className="container">
+          <h2 className="text-4xl text-center mb-6">
+            Kommt dir bekannt vor?
+          </h2>
+          
+          <p className="text-2xl text-gray-500 text-center mb-12">
+            Der nächste Schritt: Deine persönliche Potenzialanalyse:
+          </p>
+          
+          <div className="flex justify-center">
+            <button className="bg-[#35a8a1] hover:bg-[#35a8a1]/90 text-white text-lg px-12 py-4 rounded-sm transition-colors">
+              Zur Potenzialanalyse
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

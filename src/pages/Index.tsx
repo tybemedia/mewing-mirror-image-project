@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -13,6 +12,7 @@ import CallToAction from '@/components/CallToAction';
 import CallToActionTriangle from '@/components/CallToActionTriangle';
 import ServicePortfolio from '@/components/ServicePortfolio';
 import Footer from '@/components/Footer';
+import ManagingPartner from '@/components/ManagingPartner';
 
 const Index = () => {
   return (
@@ -20,15 +20,15 @@ const Index = () => {
       <Navigation />
       <Hero />
       <ChallengesSection />
-      <BenefitsSection />
       <ProcessSection />
-      <InfoSection />
-      <TestimonialSection />
+      <BenefitsSection />
       <CallToAction />
+      <TestimonialSection />
       <ServicePortfolio />
       <ServicesSection />
-      <AboutSection />
       <CallToActionTriangle />
+      <AboutSection />
+      <ManagingPartner />
       <Footer />
     </div>
   );

@@ -1,27 +1,33 @@
-
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
+import { FadeIn } from "./animations/FadeIn";
 
 const CallToAction = () => {
   return (
-    <section className="bg-black text-white py-20 relative">
-      <div className="container z-10 relative">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl mb-6">
-            Du willst wissen, welches Potenzial du in deiner individuellen Situation hast?
-          </h2>
-          
-          <div className="mt-10">
-            <Button className="bg-black border-2 border-white hover:bg-white hover:text-black text-white text-xl px-8 py-6 rounded">
+    <section className="bg-white py-20">
+      <div className="container">
+        <FadeIn>
+          <motion.div 
+            initial={{ scale: 0.95 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h2 className="text-3xl font-light tracking-wide mb-10 text-[#1a242c]">
+              Du willst wissen, welches Potenzial du in deiner individuellen Situation hast?
+            </h2>
+            
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-[#1a242c] hover:bg-[#1a242c]/90 text-white px-6 py-3 text-base font-normal tracking-wide transition-colors"
+            >
               Jetzt Potenzialanalyse sichern
-            </Button>
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+        </FadeIn>
       </div>
-      
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-white" style={{
-        clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 100%)"
-      }}></div>
     </section>
   );
 };
