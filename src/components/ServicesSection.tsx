@@ -1,49 +1,55 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { FadeIn } from "./animations/FadeIn";
+import { CheckCircle } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
       title: "Strukturplanung & Gründungsservice",
-      items: [
-        "Steueroptimierte Strukturen",
-        "Gesellschaftsgründungen",
-        "Vertragsgestaltung"
+      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      points: [
+        "Optimierte Firmensetups für Steuereffizienz und Haftungsbeschränkung",
+        "Beteiligungsmanagement",
+        "Strukturberatung",
+        "Neu- und Ausgründungen",
       ],
-      image: "http://virtus-finance.de/wp-content/uploads/2025/02/B_11343.jpg"
     },
     {
       title: "Kapitalaufbau & Vermögensanlage",
-      items: [
-        "Investmentstrategie",
-        "Portfoliomanagement",
-        "Renditeoptimierung"
+      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      points: [
+        "Offmarket Immobilien Investments",
+        "Wissenschaftliches Investieren",
+        "Geldanlage in der Kapitalgesellschaft",
+        "Portfolio Zusammenstellung",
+        "Geschäftsführer-Versorgung",
       ],
-      image: "http://virtus-finance.de/wp-content/uploads/2025/02/B_11343.jpg"
     },
     {
       title: "Liquiditätsoptimierung & Finanzierung",
-      items: [
-        "Cashflow Management",
-        "Finanzierungskonzepte",
-        "Working Capital Optimierung"
+      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      points: [
+        "Optimierte Gehaltsstrukturen",
+        "Kapitalbeschaffung",
+        "Effiziente Banking & Depot Setups",
+        "Erhöhung der Brutto-Bezahlquote (Betriebs- statt Privatausgaben)",
       ],
-      image: "http://virtus-finance.de/wp-content/uploads/2025/02/B_11343.jpg"
     },
     {
-      title: "Vermögensschutz & Risikomanagement",
-      items: [
-        "Asset Protection",
-        "Risikominimierung",
-        "Absicherungsstrategien"
+      title: "Vermögensschutz & Riskmanagement",
+      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      points: [
+        "Stiftungen",
+        "Individuelle Deckungskonzepte",
+        "CapBonds",
+        "Notfallkonzepte",
       ],
-      image: "http://virtus-finance.de/wp-content/uploads/2025/02/B_11343.jpg"
-    }
+    },
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section className="py-24 bg-white text-[#18171a]">
       <div className="container">
         <div className="text-center mb-16">
           <div className="inline-block bg-[#35a8a1] px-6 py-2 mb-4">
@@ -59,42 +65,30 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <FadeIn key={index} delay={index * 0.2}>
-              <motion.div 
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="relative overflow-hidden"
-              >
-                <div className="h-64 overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
-                </div>
-                <div 
-                  className="text-white p-8 relative"
-                  style={{
-                    background: 'linear-gradient(to bottom right, rgb(26, 36, 44) 0%, rgb(53, 168, 161, 0.15) 100%)'
-                  }}
-                >
-                  <div className="absolute inset-0 opacity-90" style={{
-                    background: 'linear-gradient(to bottom right, rgb(26, 36, 44) 0%, rgb(53, 168, 161) 200%)'
-                  }} />
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-light tracking-wide mb-6">{service.title}</h3>
-                    <ul className="space-y-4">
-                      {service.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-center">
-                          <svg className="w-5 h-5 text-[#35a8a1] mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M20 6L9 17L4 12" />
-                          </svg>
-                          <span className="text-gray-200">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
-            </FadeIn>
+        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col bg-gradient-to-br from-[#1a242c] to-[#2c4654] rounded-lg overflow-hidden shadow-lg h-full"
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-48 object-cover"
+                style={{ borderRadius: 0 }}
+              />
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                <ul className="space-y-2 flex-1">
+                  {service.points.map((point, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle className="text-[#35a8a1] w-5 h-5 mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-white">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -111,8 +111,11 @@ const ChallengesSection = () => {
         <div className="container">
           <FadeIn>
             <div className="mb-12">
-              <h2 className="text-4xl md:text-5xl mb-8 flex items-center flex-wrap">
-                <span className="mr-4">6 unternehmerische</span> 
+              <h2
+                className="challenges-heading text-4xl md:text-5xl mb-8 flex items-center flex-wrap"
+                style={{ height: '96px' }}
+              >
+                <span className="mr-4">6 unternehmerische</span>
                 <GradientHighlight delay={0.3}>
                   Herausforderungen
                 </GradientHighlight>

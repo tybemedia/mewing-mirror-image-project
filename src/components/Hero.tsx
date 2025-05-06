@@ -6,7 +6,10 @@ import GradientHighlight from './ui/GradientHighlight';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[600px] flex items-center">
+    <section
+      className="relative flex items-center justify-center"
+      style={{ minHeight: 'calc(100vh - 200px)' }}
+    >
       {/* Background image */}
       <motion.div 
         initial={{ opacity: 0 }}

@@ -6,15 +6,15 @@ const ManagingPartner = () => {
   const partners = [
     {
       name: "Maximilian Mewing",
-      position: "Managing Partner",
-      image: "http://virtus-finance.de/wp-content/uploads/2025/02/B_11343.jpg",
-      description: "Mit über 10 Jahren Erfahrung in der Vermögensverwaltung und Unternehmensberatung unterstützt Maximilian Mewing Unternehmer dabei, ihr Business und Vermögen optimal aufzustellen."
+      position: "Geschäftsführer",
+      image: "/Til.png",
+      description: `Nach einem Studium des Management & Rechts und Stationen in der Unternehmensberatung sowie Finanzdienstleistung betreute Maximilian Mewing über 500 Mandanten in Steuer- und Vermögensstrategien. 2024 gründete er die Valorem Capital Solutions GmbH, gefolgt von der Virtus Financial Services & Virtus Wealth Management (2025) – mit dem klaren Ziel Family Office Dienstleistungen auch für junge Founder und KMU nutzbar zu machen.`,
     },
     {
       name: "Til Reinecke",
-      position: "Managing Partner",
-      image: "https://placehold.co/800x800/1a242c/FFFFFF",
-      description: "Als erfahrener Berater für Vermögensstrukturierung und Unternehmensoptimierung begleitet Til Reinecke Unternehmer auf ihrem Weg zum nachhaltigen Erfolg."
+      position: "Geschäftsführer",
+      image: "/Max.png",
+      description: `Als studierter Betriebswirt, geprüfter Versicherungsmakler, Finanzanlagenfachmann, Berater für Generationsberatung und Immobilienmakler vereint Til Reinecke tiefgehende Finanz- und Investmentexpertise. Mit zusätzlicher Erfahrung als Geschäftsführer mehrerer Unternehmen und seinen analytischen Fähigkeiten, liegt Tils Fokus auf den Themen Investment und strategische Absicherung unser Klienten.`,
     }
   ];
 

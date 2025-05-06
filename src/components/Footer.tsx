@@ -48,9 +48,9 @@ const Footer = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                src="/11.png" 
+                src="2.png" 
                 alt="VIA Group" 
-                className="w-32 h-auto mb-8 brightness-0 invert"
+                className="w-40 h-auto mb-8 brightness-0 invert"
               />
             </div>
           </FadeIn>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -19,9 +18,15 @@ const CallToActionTriangle = () => {
         </Button>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-white" style={{
-        clipPath: "polygon(0 100%, 100% 100%, 50% 0)"
-      }}></div>
+      <div
+        className="absolute left-0 right-0 bottom-0"
+        style={{
+          height: "80px",
+          background: "black",
+          clipPath: "polygon(0 0, 100% 0, 50% 100%)",
+          zIndex: 20,
+        }}
+      ></div>
     </section>
   );
 };

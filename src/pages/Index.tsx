@@ -11,8 +11,11 @@ import ServicesSection from '@/components/ServicesSection';
 import CallToAction from '@/components/CallToAction';
 import CallToActionTriangle from '@/components/CallToActionTriangle';
 import ServicePortfolio from '@/components/ServicePortfolio';
+import JourneyTimeline from '@/components/JourneyTimeline';
 import Footer from '@/components/Footer';
 import ManagingPartner from '@/components/ManagingPartner';
+import FAQSection from '@/components/FAQSection';
+import ComparisonSection from '@/components/ComparisonSection';
 
 const Index = () => {
   return (
@@ -24,11 +27,13 @@ const Index = () => {
       <BenefitsSection />
       <CallToAction />
       <TestimonialSection />
-      <ServicePortfolio />
-      <ServicesSection />
+      <ComparisonSection/>
       <CallToActionTriangle />
+      <ServicesSection />
+      <JourneyTimeline />
       <AboutSection />
       <ManagingPartner />
+      <FAQSection/>
       <Footer />
     </div>
   );
