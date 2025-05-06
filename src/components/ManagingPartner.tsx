@@ -87,19 +87,22 @@ const ManagingPartner = () => {
   };
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-16 md:py-24">
       <div className="container">
-        <div className="mb-20 text-center">
-          <h2 className="text-4xl font-light tracking-wide text-[#1a242c] mb-6">
+        <div className="mb-12 md:mb-20 text-center">
+          <h2 className="text-3xl md:text-4xl font-light tracking-wide text-[#1a242c] mb-4 md:mb-6">
             Unser Team
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Erfahrene Berater mit einem ganzheitlichen Ansatz für Ihren nachhaltigen Erfolg.
           </p>
         </div>
         <div className="space-y-8">
-          <PartnerSection partner={partners[0]} />
-          <PartnerSection partner={partners[1]} imageLeft={true} />
+          {partners.map((partner, i) => (
+            <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <PartnerSection partner={partner} />
+            </div>
+          ))}
         </div>
       </div>
     </section>
