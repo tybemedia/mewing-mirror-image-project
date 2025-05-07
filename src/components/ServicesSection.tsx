@@ -7,7 +7,7 @@ const ServicesSection = () => {
   const services = [
     {
       title: "Strukturplanung & Gründungsservice",
-      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      image: "./Jeld.png",
       points: [
         "Optimierte Firmensetups für Steuereffizienz und Haftungsbeschränkung",
         "Beteiligungsmanagement",
@@ -17,7 +17,7 @@ const ServicesSection = () => {
     },
     {
       title: "Kapitalaufbau & Vermögensanlage",
-      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      image: "./Jeld.png",
       points: [
         "Offmarket Immobilien Investments",
         "Wissenschaftliches Investieren",
@@ -28,7 +28,7 @@ const ServicesSection = () => {
     },
     {
       title: "Liquiditätsoptimierung & Finanzierung",
-      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      image: "./IVST.png",
       points: [
         "Optimierte Gehaltsstrukturen",
         "Kapitalbeschaffung",
@@ -38,7 +38,7 @@ const ServicesSection = () => {
     },
     {
       title: "Vermögensschutz & Riskmanagement",
-      image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
+      image: "./Assetprotection.png",
       points: [
         "Stiftungen",
         "Individuelle Deckungskonzepte",

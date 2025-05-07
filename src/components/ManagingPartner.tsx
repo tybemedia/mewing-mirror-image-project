@@ -62,7 +62,7 @@ const ManagingPartner = () => {
     );
 
     return (
-      <div className="grid grid-cols-2 gap-8">
+      <>
         {imageLeft ? (
           <>
             <FadeIn direction="left">
@@ -82,7 +82,7 @@ const ManagingPartner = () => {
             </FadeIn>
           </>
         )}
-      </div>
+      </>
     );
   };
 
@@ -100,7 +100,7 @@ const ManagingPartner = () => {
         <div className="space-y-8">
           {partners.map((partner, i) => (
             <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <PartnerSection partner={partner} />
+              <PartnerSection partner={partner} imageLeft={i === 0} />
             </div>
           ))}
         </div>
