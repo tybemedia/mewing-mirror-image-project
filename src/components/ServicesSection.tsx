@@ -17,7 +17,7 @@ const ServicesSection = () => {
     },
     {
       title: "Kapitalaufbau & Vermögensanlage",
-      image: "./Jeld.png",
+      image: "./Macbook Mockup (1).png",
       points: [
         "Offmarket Immobilien Investments",
         "Wissenschaftliches Investieren",
@@ -69,7 +69,8 @@ const ServicesSection = () => {
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex flex-col bg-gradient-to-br from-[#1a242c] to-[#2c4654] rounded-lg overflow-hidden shadow-lg h-full"
+              className="flex flex-col rounded-lg overflow-hidden shadow-lg h-full"
+              style={{ backgroundImage: 'url("./lg2x.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
               <img
                 src={service.image}
