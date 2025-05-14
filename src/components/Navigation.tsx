@@ -14,7 +14,7 @@ const Navigation = () => {
       <div className="container">
         <div className="flex justify-between items-center">
           <div className="w-32 md:w-40">
-            <img src="Valoremsmall.png" alt="VIA Group" className="w-full h-auto" />
+            <img src="./md2x.svg" alt="VIA Group" className="w-full h-auto"/>
           </div>
           <div className="hidden md:flex space-x-8">
             <a href="#" className="text-lg font-medium hover:opacity-70">Startseite</a>

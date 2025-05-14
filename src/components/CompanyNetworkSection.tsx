@@ -3,15 +3,15 @@ import React from 'react';
 const companies = [
   {
     title: 'Strategieberatung',
-    image: '/placeholder.svg',
+    image: '/Investment.png',
   },
   {
     title: 'Vermögensverwaltung & Immobilien',
-    image: '/placeholder.svg',
+    image: '/Investment.png',
   },
   {
     title: 'Finanzdienstleistung',
-    image: '/placeholder.svg',
+    image: '/Investment.png',
   },
 ];
 
