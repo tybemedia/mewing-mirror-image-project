@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import GradientHighlight from './ui/GradientHighlight';
 
 const CallToActionTriangle = () => {
   return (
@@ -12,10 +13,12 @@ const CallToActionTriangle = () => {
           der <span className="bg-[#35a8a1] px-4 py-1">ganzheitlich und proaktiv</span> agiert?
         </h3>
         
-        <Button className="bg-[#35a8a1] hover:bg-[#35a8a1]/90 text-white px-8 py-6">
-          Jetzt Zusammenarbeit anfragen
-          <span className="block text-sm">kostenfreie Potenzialanalyse</span>
-        </Button>
+        <div className="flex justify-center w-full mt-8">
+          <Button className="bg-[#35a8a1] hover:bg-[#35a8a1]/90 text-white px-6 sm:px-8 py-8 max-w-xs sm:max-w-md md:max-w-lg break-words whitespace-normal text-base sm:text-lg flex flex-col items-center">
+            <span className="block w-full text-center">Jetzt Zusammenarbeit anfragen</span>
+            <span className="block w-full text-center text-sm">kostenfreie Potenzialanalyse</span>
+          </Button>
+        </div>
       </div>
       
       <div

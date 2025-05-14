@@ -11,7 +11,7 @@ const Navigation = () => {
       transition={{ duration: 0.8 }}
       className="bg-white py-[1em] fixed w-full z-50 top-0 shadow"
     >
-      <div className="container">
+      <div className="container max-w-full px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="w-32 md:w-40">
             <img src="./md2x.svg" alt="VIA Group" className="w-full h-auto"/>
@@ -33,12 +33,12 @@ const Navigation = () => {
           </button>
         </div>
         {open && (
-          <div className="md:hidden mt-4 space-y-4">
-            <a href="#" className="text-lg font-medium hover:opacity-70">Startseite</a>
-            <a href="#" className="text-lg font-medium hover:opacity-70">Über uns</a>
-            <a href="#" className="text-lg font-medium hover:opacity-70">Leistungen</a>
-            <a href="#" className="text-lg font-medium hover:opacity-70">Branchen</a>
-            <a href="#" className="text-lg font-medium hover:opacity-70">Karriere</a>
+          <div className="md:hidden mt-4 space-y-4 w-full">
+            <a href="#" className="text-lg font-medium hover:opacity-70 block">Startseite</a>
+            <a href="#" className="text-lg font-medium hover:opacity-70 block">Über uns</a>
+            <a href="#" className="text-lg font-medium hover:opacity-70 block">Leistungen</a>
+            <a href="#" className="text-lg font-medium hover:opacity-70 block">Branchen</a>
+            <a href="#" className="text-lg font-medium hover:opacity-70 block">Karriere</a>
             <button className="w-full bg-black hover:bg-black/90 text-white text-lg font-medium px-6 py-3 rounded-sm">
               Kostenlose Potenzialanalyse
             </button>

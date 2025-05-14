@@ -50,26 +50,26 @@ const ServicesSection = () => {
 
   return (
     <section className="py-24 text-[#18171a]">
-      <div className="container">
+      <div className="container max-w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block bg-[#35a8a1] px-6 py-2 mb-4">
             <h2 className="text-3xl text-white">Dienstleistungsportfolio</h2>
           </div>
           
-          <p className="text-xl mb-4 text-white">
+          <p className="text-xl mb-4 text-white break-words">
             Von der Analyse, über die Strategische Planung zur Konzeption und Umsetzung.
           </p>
           
-          <p className="text-xl text-white">
+          <p className="text-xl text-white break-words">
             Wir gehen den Weg mit dir gemeinsam.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="flex flex-col rounded-lg overflow-hidden shadow-lg h-full border border-[#232328]/60"
+              className="flex flex-col rounded-lg overflow-hidden shadow-lg h-full border border-[#232328]/60 min-w-0"
               style={{ backgroundImage: 'url("./lg2x.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
               <img
@@ -78,13 +78,13 @@ const ServicesSection = () => {
                 className="w-full h-48 object-cover"
                 style={{ borderRadius: 0 }}
               />
-              <div className="p-8 flex flex-col flex-1">
-                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+              <div className="p-6 sm:p-8 flex flex-col flex-1">
+                <h3 className="text-2xl font-bold mb-4 text-white break-words">{service.title}</h3>
                 <ul className="space-y-2 flex-1">
                   {service.points.map((point, i) => (
                     <li key={i} className="flex items-start">
                       <CheckCircle className="text-[#35a8a1] w-5 h-5 mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-white">{point}</span>
+                      <span className="text-white break-words">{point}</span>
                     </li>
                   ))}
                 </ul>

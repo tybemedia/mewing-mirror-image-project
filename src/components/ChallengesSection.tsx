@@ -212,17 +212,17 @@ const ChallengesSection = () => {
 
       {/* Kommt dir bekannt vor? section */}
       <section className="py-24 bg-white">
-        <div className="container">
-          <h2 className="text-4xl text-center mb-6">
+        <div className="container max-w-full px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl text-center mb-6 break-words">
             Kommt dir bekannt vor?
           </h2>
           
-          <p className="text-2xl text-gray-500 text-center mb-12">
+          <p className="text-2xl text-gray-500 text-center mb-12 break-words">
             Der nächste Schritt: Deine persönliche Potenzialanalyse:
           </p>
           
-          <div className="flex justify-center">
-            <button className="bg-[#35a8a1] hover:bg-[#35a8a1]/90 text-white text-lg px-12 py-4 rounded-sm transition-colors">
+          <div className="flex justify-center w-full">
+            <button className="bg-[#35a8a1] hover:bg-[#35a8a1]/90 text-white text-lg px-8 sm:px-12 py-4 rounded-sm transition-colors w-full max-w-xs sm:max-w-md md:max-w-lg">
               Zur Potenzialanalyse
             </button>
           </div>

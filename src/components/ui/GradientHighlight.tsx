@@ -8,7 +8,7 @@ interface GradientHighlightProps {
 
 const GradientHighlight = ({ children, delay = 0 }: GradientHighlightProps) => {
   return (
-    <span className="relative inline-block">
+    <span className="relative break-words">
       <span className="relative z-10 px-[0.25em]">{children}</span>
       <motion.span 
         initial={{ scaleX: 0 }}
