@@ -17,6 +17,7 @@ const ChallengesSection = () => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [totalPages, setTotalPages] = React.useState(2);
+  const [itemsPerPage, setItemsPerPage] = React.useState(3);
 
   React.useEffect(() => {
     if (!api) {
@@ -27,24 +28,27 @@ const ChallengesSection = () => {
       setCurrent(api.selectedScrollSnap());
     });
 
-    // Update total pages based on viewport width
-    const updateTotalPages = () => {
+    // Update itemsPerPage and totalPages based on viewport width
+    const updatePagination = () => {
       const width = window.innerWidth;
+      let perPage = 3;
       if (width >= 1024) {
-        setTotalPages(2); // Desktop: 3 items per page
+        perPage = 3; // Desktop: 3 items per page
       } else if (width >= 768) {
-        setTotalPages(3); // Tablet: 2 items per page
+        perPage = 2; // Tablet: 2 items per page
       } else {
-        setTotalPages(6); // Mobile: 1 item per page
+        perPage = 1; // Mobile: 1 item per page
       }
+      setItemsPerPage(perPage);
+      setTotalPages(Math.ceil(challenges.length / perPage));
     };
 
     // Initial calculation
-    updateTotalPages();
+    updatePagination();
 
     // Update on resize
-    window.addEventListener('resize', updateTotalPages);
-    return () => window.removeEventListener('resize', updateTotalPages);
+    window.addEventListener('resize', updatePagination);
+    return () => window.removeEventListener('resize', updatePagination);
   }, [api]);
 
   const challenges = [
@@ -153,7 +157,7 @@ const ChallengesSection = () => {
             opts={{
               align: "start",
               loop: false,
-              slidesToScroll: 3,
+              slidesToScroll: itemsPerPage,
               containScroll: "keepSnaps",
             }}
           >
