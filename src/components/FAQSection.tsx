@@ -52,7 +52,7 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#18171a] py-24">
+    <section className="bg-[#1a242c] py-24">
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white tracking-tight">
           Häufige Fragen
@@ -61,22 +61,22 @@ const FAQSection = () => {
           {faqData.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-sm shadow-lg overflow-hidden"
+              className="bg-[#232328]/80 rounded-sm shadow-lg overflow-hidden border border-[#35a8a1]/40"
             >
               <button
-                className="w-full text-left px-8 py-6 focus:outline-none flex items-center justify-between"
+                className="w-full text-left px-8 py-6 focus:outline-none flex items-center justify-between bg-transparent text-white"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
-                <span className="text-lg font-medium text-[#18171a]">
+                <span className="text-lg font-medium">
                   {item.question}
                 </span>
-                <span className="ml-4 text-2xl text-[#35a8a1] font-bold select-none">
+                <span className="ml-4 text-2xl font-bold select-none bg-white text-[#18171a] rounded-full w-8 h-8 flex items-center justify-center">
                   {openIndex === idx ? "–" : "+"}
                 </span>
               </button>
               {openIndex === idx && (
-                <div className="px-8 pb-8 text-gray-700 text-lg animate-fadeIn">
+                <div className="px-8 pb-8 text-white text-lg animate-fadeIn">
                   {item.answer}
                 </div>
               )}

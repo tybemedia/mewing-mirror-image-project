@@ -19,7 +19,7 @@ const ProcessSection = () => {
       />
       <motion.div 
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.9 }}
+        whileInView={{ opacity: 0.7 }}
         transition={{ duration: 1.5, delay: 0.3 }}
         viewport={{ once: true }}
         className="absolute inset-0 bg-gradient-to-b from-[#1a242c] to-[#2c4654]"
@@ -31,15 +31,15 @@ const ProcessSection = () => {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="bg-white p-12 max-w-[800px] rounded-sm"
+          className="bg-white p-12 max-w-[800px] rounded-sm border border-[#232328]/60"
         >
           <FadeIn>
             <h2 className="text-3xl md:text-4xl mb-8">
-              Was passiert in der{' '}
+              Was passiert in der
+              <span className="inline-block w-4"></span>
               <GradientHighlight delay={0.5}>
-                Potenzialanalyse
+                Potenzialanalyse?
               </GradientHighlight>
-              ?
             </h2>
           </FadeIn>
           
@@ -51,8 +51,8 @@ const ProcessSection = () => {
           </FadeIn>
           
           <p className="mb-6 text-lg">
-            Gemeinsam erarbeiten wir bereits ein erstes Konzept, mit konkreten Ansätzen, mit 
-            denen du:
+            Gemeinsam erarbeiten wir bereits ein erstes Konzept, mit konkreten Ansätzen. 
+            Dadurch wird es möglich sein, dass du:
           </p>
           
           <ul className="space-y-6 mb-8">

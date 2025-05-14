@@ -11,12 +11,14 @@ import { type CarouselApi } from "@/components/ui/carousel";
 import { motion } from "framer-motion";
 import { FadeIn } from "./animations/FadeIn";
 import GradientHighlight from './ui/GradientHighlight';
+import CardSection from './ui/card-section';
 
 const ChallengesSection = () => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
+  const [totalPages, setTotalPages] = React.useState(2);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!api) {
       return;
     }
@@ -24,6 +26,25 @@ const ChallengesSection = () => {
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());
     });
+
+    // Update total pages based on viewport width
+    const updateTotalPages = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setTotalPages(2); // Desktop: 3 items per page
+      } else if (width >= 768) {
+        setTotalPages(3); // Tablet: 2 items per page
+      } else {
+        setTotalPages(6); // Mobile: 1 item per page
+      }
+    };
+
+    // Initial calculation
+    updateTotalPages();
+
+    // Update on resize
+    window.addEventListener('resize', updateTotalPages);
+    return () => window.removeEventListener('resize', updateTotalPages);
   }, [api]);
 
   const challenges = [
@@ -98,17 +119,20 @@ const ChallengesSection = () => {
     }
   ];
 
-  // Split challenges into pairs
-  const challengePairs = [];
-  for (let i = 0; i < challenges.length; i += 2) {
-    challengePairs.push(challenges.slice(i, i + 2));
-  }
-
   return (
     <>
       {/* 6 Unternehmerische Herausforderungen */}
-      <section className="py-24 bg-gradient-to-b from-[#1a242c] to-[#2c4654] text-white">
-        <div className="container">
+      <section className="py-24 text-white relative">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/lg2x.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        <div className="container relative z-10">
           <FadeIn>
             <div className="mb-12">
               <h2
@@ -128,50 +152,54 @@ const ChallengesSection = () => {
             className="w-full"
             opts={{
               align: "start",
-              loop: true,
+              loop: false,
+              slidesToScroll: 3,
+              containScroll: "keepSnaps",
             }}
           >
-            <CarouselContent>
-              {challengePairs.map((pair, pairIndex) => (
-                <CarouselItem key={pairIndex}>
-                  <div className="grid grid-cols-2 gap-6">
-                    {pair.map((challenge, index) => (
-                      <FadeIn key={index} delay={index * 0.2}>
-                        <motion.div 
-                          whileHover={{ scale: 1.02 }}
-                          transition={{ duration: 0.3 }}
-                          className="bg-[#35a8a1] p-10 rounded-sm"
-                        >
-                          <div className="mb-8">
-                            {challenge.icon}
-                          </div>
-                          <h3 className="text-2xl font-medium mb-6 text-white">
-                            {challenge.title}
-                          </h3>
-                          {challenge.description.map((paragraph, pIndex) => (
-                            <p key={pIndex} className="mb-4 text-white/90 leading-relaxed">
-                              {paragraph}
-                            </p>
-                          ))}
-                        </motion.div>
-                      </FadeIn>
-                    ))}
-                  </div>
+            <CarouselContent className="-ml-4">
+              {challenges.map((challenge, index) => (
+                <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3 flex-shrink-0">
+                  <FadeIn delay={index * 0.2}>
+                    <CardSection
+                      as={motion.div}
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                      className="h-[400px]"
+                    >
+                      <div className="mb-4 flex justify-start">
+                        {challenge.icon}
+                      </div>
+                      <h3 className="text-xl font-medium mb-4 text-white">
+                        <span className="text-white mr-2">{index + 1}.</span>
+                        {challenge.title}
+                      </h3>
+                      <div className="flex-grow">
+                        {challenge.description.map((paragraph, pIndex) => (
+                          <p key={pIndex} className="mb-3 text-white/90 leading-relaxed text-sm">
+                            {paragraph}
+                          </p>
+                        ))}
+                      </div>
+                    </CardSection>
+                  </FadeIn>
                 </CarouselItem>
               ))}
             </CarouselContent>
 
-            {/* Pagination */}
-            <div className="flex justify-center gap-2 mt-8">
-              {challengePairs.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => api?.scrollTo(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    current === index ? 'w-8 bg-white' : 'w-2 bg-white/50'
-                  }`}
-                />
-              ))}
+            {/* Updated pagination without numbers */}
+            <div className="flex justify-center items-center gap-4 mt-8">
+              <div className="flex gap-2">
+                {Array.from({ length: totalPages }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      current === index ? 'w-8 bg-white' : 'w-2 bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
 
             <div className="flex justify-end gap-2 mt-8">

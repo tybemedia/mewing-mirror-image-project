@@ -2,6 +2,7 @@ import React from 'react';
 import GradientHighlight from './ui/GradientHighlight';
 import { motion } from "framer-motion";
 import { FadeIn } from "./animations/FadeIn";
+import Masonry from 'react-masonry-css';
 
 const benefits = [
   {
@@ -38,20 +39,37 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="py-24 bg-white">
+    <section
+      className="py-24 relative"
+      style={{
+        backgroundImage: "url('/lg2x.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="container">
-        <h2 className="text-4xl mb-12">
-          So profitieren Unsere Klienten von{' '}
-          <GradientHighlight>
-            ganzheitlicher Wirtschaftsberatung
-          </GradientHighlight>
+        <h2 className="text-4xl mb-12 text-white">
+          <span className="whitespace-nowrap block md:inline">
+            So profitieren Unsere Klienten von{' '}
+            <span className="ml-2">
+              <GradientHighlight>
+                ganzheitlicher Wirtschaftsberatung
+              </GradientHighlight>
+            </span>
+          </span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Masonry layout for benefits */}
+        <Masonry
+          breakpointCols={{ default: 3, 1100: 2, 700: 1 }}
+          className="flex w-auto -ml-4"
+          columnClassName="pl-4"
+        >
           {benefits.map((benefit, idx) => (
             <div
               key={idx}
-              className="relative rounded-lg shadow-lg overflow-hidden flex flex-col h-full"
+              className="relative rounded-lg shadow-lg overflow-hidden flex flex-col mb-4 border border-[#232328]/60"
               style={{
                 background: "linear-gradient(135deg, rgba(53,168,161,0.2) 0%, rgba(26,36,44,0.9) 100%)",
               }}
@@ -70,13 +88,19 @@ const BenefitsSection = () => {
                 <img
                   src={benefit.image}
                   alt={benefit.title}
-                  className="w-full object-cover relative z-10"
-                  style={{ margin: 0, padding: 0, borderRadius: 0 }}
+                  className="w-full object-cover relative z-10 rounded-b-lg"
+                  style={{
+                    margin: 0,
+                    padding: 0,
+                    borderTopLeftRadius: 0,
+                    borderTopRightRadius: 0,
+                    display: 'block'
+                  }}
                 />
               )}
             </div>
           ))}
-        </div>
+        </Masonry>
       </div>
     </section>
   );

@@ -16,6 +16,7 @@ import Footer from '@/components/Footer';
 import ManagingPartner from '@/components/ManagingPartner';
 import FAQSection from '@/components/FAQSection';
 import ComparisonSection from '@/components/ComparisonSection';
+import CompanyNetworkSection from '@/components/CompanyNetworkSection';
 
 const Index = () => {
   return (
@@ -26,13 +27,33 @@ const Index = () => {
       <ProcessSection />
       <BenefitsSection />
       <CallToAction />
-      <TestimonialSection />
-      <ComparisonSection/>
-      <CallToActionTriangle />
-      <ServicesSection />
-      <JourneyTimeline />
-      <AboutSection />
-      <ManagingPartner />
+      <div
+        style={{
+          backgroundImage: "url('/lg2x.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <TestimonialSection />
+        <ComparisonSection />
+        <CallToActionTriangle />
+        <ServicesSection />
+        <JourneyTimeline />
+      </div>
+      <div
+        style={{
+          backgroundImage: "url('/lg2x.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+              <CallToAction />
+        <AboutSection />
+        <ManagingPartner />
+      </div>
+      <CompanyNetworkSection />
       <FAQSection/>
       <Footer />
     </div>

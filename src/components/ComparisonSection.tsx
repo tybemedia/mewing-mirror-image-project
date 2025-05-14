@@ -20,7 +20,7 @@ const viaPoints = [
 ];
 
 const ComparisonSection = () => (
-  <section className="bg-gradient-to-b from-[#1a242c] to-[#2c4654] py-24 text-white">
+  <section className="py-24 text-white relative">
     <div className="container max-w-5xl mx-auto">
       <motion.h2
         className="text-4xl md:text-5xl font-bold mb-6 text-white"
@@ -71,7 +71,10 @@ const ComparisonSection = () => (
         </motion.div>
         {/* Value in Action Group */}
         <motion.div
-          className="bg-transparent border border-[#35a8a1] rounded-lg p-8 flex flex-col shadow-lg"
+          className="rounded-sm p-8 flex flex-col border border-[#232328]/60"
+          style={{
+            background: 'linear-gradient(135deg, rgba(53,168,161,0.2) 0%, rgba(26,36,44,0.9) 100%)'
+          }}
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}

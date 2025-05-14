@@ -9,27 +9,27 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 const steps = [
   {
     title: "Discovery Phase",
-    description: "Erstgespräch, Kennenlernen und Zieldefinition.",
+    description: "In einem ersten Gespräch klären wir die individuellen Herausforderungen und Ziele. Hier legen wir die Basis für eine erfolgreiche und vertrauensvolle Zusammenarbeit.",
     image: "https://onecdn.io/media/f38a9d62-e98a-47e4-b353-02007f5f11b9/md",
   },
   {
     title: "Analyse Phase",
-    description: "Analyse der aktuellen Situation und Herausforderungen.",
+    description: "Zum Start der Zusammenarbeit analyiseren wir deinen Status Quo und decken Potenziale, sowie konkrete Handlungsfelder auf. Dabei beleuchten wir deinen Case sowohl aus finanzieller, steuerlicher als auch juristischer Perspektive.",
     image: "https://onecdn.io/media/222af3bb-ade5-4ccf-b039-9a76be983548/md",
   },
   {
     title: "Konzeption",
-    description: "Entwicklung eines individuellen Konzepts.",
+    description: "Auf Grundlage der Analyse entwickeln wir eine maßgeschneiderte Strategie mit klaren Lösungsansätzen. Diese werden dann in eine strategische Roadmap eingeordnet und priorisiert.",
     image: "https://onecdn.io/media/4cdc6476-6dca-469a-a499-452a23d274a4/md",
   },
   {
     title: "Umsetzung",
-    description: "Implementierung der entwickelten Strategien.",
+    description: "Unser Expertenteam setzt die geplanten Maßnahmen effizient in die Praxis um. Dabei sorgen wir für einen reibungslosen Ablauf und koordinieren sämtliche Prozesse, die für den Umsetzungserfolg nötig sind.",
     image: "https://onecdn.io/media/b3640e83-52d7-4d8a-895c-29c33769454a/md",
   },
   {
     title: "Laufende Betreuung",
-    description: "Kontinuierliche Begleitung und Optimierung.",
+    description: "Unser Expertenteam setzt die geplanten Maßnahmen effizient in die Praxis um. Dabei sorgen wir für einen reibungslosen Ablauf und koordinieren sämtliche Prozesse, die für den Umsetzungserfolg nötig sind.",
     image: "https://onecdn.io/media/da780121-2014-40ef-9b68-75fe862bed59/md",
   },
 ];
@@ -50,7 +50,7 @@ const JourneyTimeline = () => {
   );
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#1a242c] to-[#2c4654] text-white">
+    <section className="py-24 text-white">
       <div className="container">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-20 tracking-tight">
           So läuft die Zusammenarbeit ab.
