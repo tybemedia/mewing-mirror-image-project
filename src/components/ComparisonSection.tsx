@@ -71,7 +71,7 @@ const ComparisonSection = () => (
         </motion.div>
         {/* Value in Action Group */}
         <motion.div
-          className="rounded-sm p-8 flex flex-col border border-[#232328]/60"
+          className="rounded-sm p-8 flex flex-col"
           style={{
             background: 'linear-gradient(135deg, rgba(53,168,161,0.2) 0%, rgba(26,36,44,0.9) 100%)'
           }}

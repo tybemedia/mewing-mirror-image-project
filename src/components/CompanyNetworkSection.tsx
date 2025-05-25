@@ -6,18 +6,18 @@ const CompanyNetworkSection = () => {
   const cards = [
     {
       icon: <FaHandshake className="w-12 h-12 text-primary" />,
-      title: 'Virtus Finance',
-      description: 'Ihre vertrauenswürdige Partnerin für Finanzberatung und Vermögensverwaltung.',
+      title: 'Financial Services',
+      description: 'Private & betriebliche Deckungskonzepte',
     },
     {
       icon: <FaBuilding className="w-12 h-12 text-primary" />,
-      title: 'Virtus Immobilien',
-      description: 'Spezialisiert auf Immobilieninvestments und -verwaltung für optimale Renditen.',
+      title: 'Capital Solutions',
+      description: 'Strategieberatung & Family Office DIenstleistungen',
     },
     {
       icon: <FaUsers className="w-12 h-12 text-primary" />,
-      title: 'Virtus Consulting',
-      description: 'Strategische Beratung für Unternehmen und Privatpersonen.',
+      title: 'Virtus Wealth Management',
+      description: 'Kapitalanlage-, Verwaltung und Immobilieninvestments',
     },
   ];
 
@@ -33,11 +33,10 @@ const CompanyNetworkSection = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Unser Unternehmensnetzwerk
+            3 Firmen, ein Ziel. Exzellenter Service für unsere Klienten.
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Entdecken Sie die verschiedenen Bereiche unseres Unternehmensnetzwerks,
-              die gemeinsam für Ihren Erfolg arbeiten.
+             
             </p>
           </motion.div>
 
@@ -49,14 +48,18 @@ const CompanyNetworkSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 flex flex-col items-center justify-center min-h-[300px]"
               >
-                <div className="flex flex-col items-center text-center">
-                  <div className="mb-6">{card.icon}</div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">
-                    {card.title}
-                  </h3>
-                  <p className="text-gray-300">
+                <div className="flex flex-col items-center w-full">
+                  <div className="mb-4 flex justify-center">
+                    <img 
+                      src={index === 0 ? "/5.png" : index === 1 ? "/2.png" : "/9.png"}
+                      alt="Logo"
+                      className="w-full h-auto object-contain" 
+                    />
+                  </div>
+                  <div className="w-8 h-px bg-white/40 mb-4" />
+                  <p className="text-gray-300 text-center w-full">
                     {card.description}
                   </p>
                 </div>

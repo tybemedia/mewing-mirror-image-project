@@ -136,6 +136,12 @@ const ChallengesSection = () => {
             backgroundRepeat: 'no-repeat'
           }}
         />
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background: 'linear-gradient(135deg, rgba(26,36,44,0.95) 0%, rgba(26,36,44,0.4) 100%)'
+          }}
+        />
         <div className="container relative z-10">
           <FadeIn>
             <div className="mb-12">

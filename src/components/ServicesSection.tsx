@@ -17,7 +17,7 @@ const ServicesSection = () => {
     },
     {
       title: "Kapitalaufbau & Vermögensanlage",
-      image: "./Macbook Mockup (1).png",
+      image: "./IMG_3711.avif",
       points: [
         "Offmarket Immobilien Investments",
         "Wissenschaftliches Investieren",

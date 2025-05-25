@@ -30,7 +30,7 @@ const steps = [
   {
     title: "Laufende Betreuung",
     description: "Unser Expertenteam setzt die geplanten Maßnahmen effizient in die Praxis um. Dabei sorgen wir für einen reibungslosen Ablauf und koordinieren sämtliche Prozesse, die für den Umsetzungserfolg nötig sind.",
-    image: "https://onecdn.io/media/da780121-2014-40ef-9b68-75fe862bed59/md",
+    image: "./IMG_3708 (2).avif",
   },
 ];
 

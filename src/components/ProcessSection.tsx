@@ -14,7 +14,7 @@ const ProcessSection = () => {
         viewport={{ once: true }}
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('http://virtus-finance.de/wp-content/uploads/2025/02/B_11343.jpg')"
+          backgroundImage: "url('./IMG_3708 (1).avif')"
         }}
       />
       <motion.div 

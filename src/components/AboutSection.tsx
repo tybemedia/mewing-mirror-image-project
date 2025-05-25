@@ -6,28 +6,27 @@ const AboutSection = () => {
   return (
     <section className="py-24 relative">
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
+        className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('/xlg2x.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'no-repeat',
         }}
       />
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.7 }}
-        transition={{ duration: 1.5, delay: 0.3 }}
-        viewport={{ once: true }}
-        className="absolute inset-0 bg-gradient-to-b from-[#1a242c] to-[#2c4654]"
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'linear-gradient(135deg, rgba(26,36,44,0.95) 0%, rgba(26,36,44,0.4) 100%)'
+        }}
       />
-      <div className="container relative z-10">
+      <div className="container max-w-full px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="bg-white p-12 max-w-[800px] rounded-sm border border-[#232328]/60"
+          className="bg-white p-12 max-w-[800px] rounded-sm"
         >
           <FadeIn>
             <h2 className="text-3xl md:text-4xl mb-8 text-[#18171a]">Über die VIA-Group</h2>

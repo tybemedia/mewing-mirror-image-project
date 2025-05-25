@@ -32,7 +32,7 @@ const TestimonialSection = () => {
       person: {
         name: "Matthias Richter",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     },
     {
@@ -42,7 +42,7 @@ const TestimonialSection = () => {
       person: {
         name: "Paul Muster",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     },
     {
@@ -52,7 +52,7 @@ const TestimonialSection = () => {
       person: {
         name: "Pedro Macht",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     },
     {
@@ -62,7 +62,7 @@ const TestimonialSection = () => {
       person: {
         name: "Ted Bundy",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     },
     {
@@ -72,7 +72,7 @@ const TestimonialSection = () => {
       person: {
         name: "Karlos Marlos",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     },
     {
@@ -82,7 +82,7 @@ const TestimonialSection = () => {
       person: {
         name: "Warren Buffet",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     },
     {
@@ -92,7 +92,7 @@ const TestimonialSection = () => {
       person: {
         name: "Markus Lanz",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     },
     {
@@ -102,7 +102,7 @@ const TestimonialSection = () => {
       person: {
         name: "Matthias Richter",
         position: "Unternehmer",
-        image: "/lovable-uploads/3425f2fd-f586-4ec8-a3a2-e20be39adb1c.png"
+        image: "https://images.unsplash.com/photo-1519340333755-c6e2a6a1b49a?auto=format&fit=facearea&w=256&h=256&facepad=2"
       }
     }
   ];
