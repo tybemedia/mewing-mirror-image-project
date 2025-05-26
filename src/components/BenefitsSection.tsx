@@ -68,7 +68,7 @@ const BenefitsSection = () => {
         </h2>
         
         {/* Masonry layout for benefits */}
-        <div className="overflow-x-hidden w-full">
+        <div className="w-full">
           <Masonry
             breakpointCols={{ default: 3, 1100: 2, 700: 1 }}
             className="flex w-full -ml-4"
